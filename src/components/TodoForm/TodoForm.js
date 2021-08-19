@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import classes from "./TodoForm.module.css";
 function TodoForm(props) {
   const [newTodo, setNewTodo] = useState("");
   const inputHandler = (e) => {
@@ -10,14 +10,21 @@ function TodoForm(props) {
     const id = Math.random().toString();
     const newlyAddedTodo = { value: newTodo, id: id };
 
-    console.log(newlyAddedTodo);
     props.onTodoSubmit(newlyAddedTodo);
     setNewTodo("");
   };
   return (
-    <form onSubmit={todoSubmitHandler}>
-      <input value={newTodo} type="text" onChange={inputHandler}></input>
-      <button type="submit">ADD TODO</button>
+    <form className={classes.todoForm} onSubmit={todoSubmitHandler}>
+      <p>Add New Todo</p>
+      <input
+        required
+        value={newTodo}
+        type="text"
+        onChange={inputHandler}
+      ></input>
+      <div>
+        <button type="submit">ADD TODO</button>
+      </div>
     </form>
   );
 }

@@ -20,9 +20,13 @@ function App() {
   };
   return (
     <div className={classes.App}>
-      my todolist project
-      <TodoForm onTodoSubmit={addTodoHandler}></TodoForm>
-      <Todolist onDeleteTodo={DeleteTodoHandler} todos={todos}></Todolist>
+      <h3>My Todos </h3>
+      <div className={classes.TodoForm}>
+        <TodoForm onTodoSubmit={addTodoHandler}></TodoForm>
+      </div>
+      <div className={classes.TodoList}>
+        <Todolist onDeleteTodo={DeleteTodoHandler} todos={todos}></Todolist>
+      </div>
     </div>
   );
 }

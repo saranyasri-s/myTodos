@@ -1,3 +1,25 @@
 .App {
   text-align: center;
 }
+.App h3 {
+  margin: 0;
+  padding: 2rem;
+}
+.background {
+  background-color: brown;
+  position: fixed;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+}
+.TodoForm {
+  width: 50%;
+  margin: auto;
+
+  box-shadow: 2px 2px 2px 2px #80808066;
+  padding: 2rem;
+}
+.TodoList {
+  width: 70%;
+  margin: 1rem auto;
+}

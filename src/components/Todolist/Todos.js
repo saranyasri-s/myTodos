@@ -1,12 +1,12 @@
 import React from "react";
-
+import classes from "./Todos.module.css";
 function Todos(props) {
   const deleteHandler = () => {
     props.onDeleteTodo(props.id);
   };
   return (
-    <div>
-      <p onClick={deleteHandler}>{props.value}</p>
+    <div className={classes.Todo} onClick={deleteHandler}>
+      <p >{props.value}</p>
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.Todo {
+  background-color: #550707;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  text-align: start;
+}
+.Todo p {
+  padding-left: 1rem;
+  margin: 0.2rem 0;
+  text-transform: capitalize;
+  color: white;
+}

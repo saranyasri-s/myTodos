@@ -1,0 +1,20 @@
+.todoForm {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.todoForm p {
+  margin: 0;
+
+  font-weight: bold;
+}
+.todoForm input {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0;
+}
+.todoForm button {
+  padding: 0.4rem 1rem;
+  background-color: #550707;
+  color: white;
+}
