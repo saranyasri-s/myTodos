@@ -5,9 +5,14 @@ function TodoForm(props) {
   const inputHandler = (e) => {
     setNewTodo(e.target.value);
   };
-  const todoSubmitHandler = () => {
-    const newlyAddedTodo = { value: newTodo, id: Math.random.toString() };
+  const todoSubmitHandler = (e) => {
+    e.preventDefault();
+    const id = Math.random().toString();
+    const newlyAddedTodo = { value: newTodo, id: id };
+
+    console.log(newlyAddedTodo);
     props.onTodoSubmit(newlyAddedTodo);
+    setNewTodo("");
   };
   return (
     <form onSubmit={todoSubmitHandler}>
